@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BPA - Gerador de Relatório</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Gerador de Relatório BPA</h1>
+    <form method="post">
+        <label for="tipo_relatorio">Tipo de Relatório:</label>
+        <select id="tipo_relatorio" name="tipo_relatorio" required>
+            <option value="CONSOLIDADO">Consolidado</option>
+            <option value="INDIVIDUALIZADA">Individualizada</option>
+        </select>
+        
+        <br><br>
+        <label for="mes">Mês:</label>
+        <select id="mes" name="mes" required>
+            <option value="1">Janeiro</option>
+            <option value="2">Fevereiro</option>
+            <option value="3">Março</option>
+            <option value="4">Abril</option>
+            <option value="5">Maio</option>
+            <option value="6">Junho</option>
+            <option value="7">Julho</option>
+            <option value="8">Agosto</option>
+            <option value="9">Setembro</option>
+            <option value="10">Outubro</option>
+            <option value="11">Novembro</option>
+            <option value="12">Dezembro</option>
+        </select>
+        <br><br>
+        
+        <label for="ano">Ano:</label>
+        <select id="ano" name="ano" required>
+            {% for ano in range(2024, 1999, -1) %}
+                <option value="{{ ano }}">{{ ano }}</option>
+            {% endfor %}
+        </select>        
+        <br><br>
+        
+        <button type="submit">Gerar Relatório</button>
+    </form>
+
+    {% if config['LAST_REPORT'] %}
+        <br>
+        <a href="{{ url_for('baixar_relatorio') }}">
+            <button>Baixar Relatório</button>
+        </a>
+    {% endif %}
+</body>
+</html>
