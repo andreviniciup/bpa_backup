@@ -1,3 +1,4 @@
+import hashlib
 from flask import request, render_template, redirect, url_for, session
 from app import app, db
 from app.models import User
@@ -18,8 +19,10 @@ def login():
     if request.method == 'POST':
         login = request.form['username']
         senha = request.form['password']
+        # Encripta a senha com MD5
+        senha_md5 = hashlib.md5(senha.encode()).hexdigest()
         # Verifica as credenciais no banco de dados
-        user = User.query.filter_by(login=login, senha=senha).first()
+        user = User.query.filter_by(login=login, senha=senha_md5).first()
         if user:
             session['username'] = login
             session['nom_usuario'] = user.nom_usuario  # Armazena o nome do usuário na sessão
