@@ -12,6 +12,11 @@ h1 {
     margin-top: 20px;
 }
 
+.welcome-message {
+    text-align: center;
+    margin-top: 10px;
+}
+
 form {
     max-width: 480px;
     margin: 20px auto;
