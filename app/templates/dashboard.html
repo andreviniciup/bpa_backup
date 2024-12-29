@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard UPA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h1>FILAS DE ATENDIMENTO UPA</h1>
+        <p>Atualizado em {{ data.atualizado_em }}</p>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <h2>Admissões nas últimas 24 horas</h2>
+            <p class="highlight">{{ data.num_qtde_admissao_24hs }}</p>
+        </div>
+        <div class="card">
+            <h2>Altas nas últimas 24 horas</h2>
+            <p class="highlight">{{ data.num_qtde_alta_24hs }}</p>
+        </div>
+        <div class="card">
+            <h2>Pacientes aguardando acolhimento</h2>
+            <p class="highlight">{{ data.num_qtde_pacientes_aguardam_acolhimento_atual }}</p>
+        </div>
+        <div class="card">
+            <h2>Tempo Médio de Atendimento nas últimas 24 horas</h2>
+            <p class="highlight">{{ data.num_tempo_medio_atendimento_24hs }}</p>
+        </div>
+        <div class="card">
+            <h2>Tempo Médio para Triagem nas últimas 24 horas</h2>
+            <p class="highlight">{{ data.num_tempo_medio_para_triagem_24hs }}</p>
+        </div>
+        <div class="card">
+            <h2>Tempo Médio para Atendimento nas últimas 24 horas</h2>
+            <p class="highlight">{{ data.num_tempo_medio_para_atendimento_24hs }}</p>
+        </div>
+        <div class="card">
+            <h2>Sala de Medicação Atual</h2>
+            <p class="highlight">{{ data.num_qtde_sala_medicacao_atual }}</p>
+        </div>
+    </div>
+
+    <div class="pie-chart">
+        <h2>Pacientes por Classificação de Risco</h2>
+        <img src="{{ url_for('static', filename='grafico.png') }}" alt="Gráfico de Classificação de Risco">
+    </div>
+
+    <div class="classification">
+        <div class="card azul">
+            <h2>Classificação Azul</h2>
+            <p>Pacientes aguardando: {{ data.num_qtde_ala_azul_atual }}</p>
+            <p>Tempo médio: {{ data.num_tempo_medio_para_atendimento_24hs }}</p>
+        </div>
+        <div class="card amarelo">
+            <h2>Classificação Amarelo</h2>
+            <p>Pacientes aguardando: {{ data.num_qtde_ala_amarela_atual }}</p>
+            <p>Tempo médio: {{ data.num_tempo_medio_para_atendimento_24hs }}</p>
+        </div>
+        <div class="card vermelho">
+            <h2>Classificação Vermelho</h2>
+            <p>Pacientes aguardando: {{ data.num_qtde_ala_vermelha_atual }}</p>
+            <p>Tempo médio: IMEDIATO</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Unidade de Pronto Atendimento - UPA 24h</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção de Serviço</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h1>Bem-vindo, {{ session['nom_usuario'] }}</h1>
+        <p>Selecione o serviço que deseja acessar:</p>
+    </div>
+    <div class="container">
+        <div class="card">
+            <h2>Gerador de BPA</h2>
+            <a href="{{ url_for('formulario_bpa') }}" class="button">Acessar</a>
+        </div>
+        <div class="card">
+            <h2>Dashboard</h2>
+            <a href="{{ url_for('dashboard') }}" class="button">Acessar</a>
+        </div>
+    </div>
+    <form action="{{ url_for('logout') }}" method="post" class="logout-form">
+        <button type="submit" class="button">Logout</button>
+    </form>
+</body>
+</html>
