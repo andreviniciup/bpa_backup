@@ -1,0 +1,31 @@
+
+services:
+  db:
+    image: postgres:15.6
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_DB: testeBPA
+      POSTGRES_USER: desenv
+      POSTGRES_PASSWORD: desenv123
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  app:
+    build: .
+    container_name: flask_app
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - "5000:5000"
+    environment:
+      DATABASE_URL: postgresql://desenv:desenv123@db:5432/testeBPA
+    volumes:
+      - .:/app
+    command: flask run --host=0.0.0.0 --port=5000
+
+volumes:
+  postgres_data:
