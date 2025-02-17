@@ -4,7 +4,7 @@ from app import app, db
 from app.models import User
 from app.utils.bpa_controller import BPAController
 from app.utils.bpa_view import BPAView
-from app.utils.auth import valida_login  
+from app.services.auth import valida_login  
 from app.utils.dashboard import get_dashboard_data 
 
 # Instancia controlador e view

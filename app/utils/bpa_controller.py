@@ -1,31 +1,32 @@
-from app.utils.bpa_service import BPAService
+from app.services.bpa_service import BPAService
 from app.utils.bpa_view import BPAView
 
-# Classe que coordena o fluxo entre a lógica de negócio (Service) e a apresentação (View)
 class BPAController:
     def __init__(self):
-        # Inicializa os objetos necessários
         self.service = BPAService()
         self.view = BPAView()
-    
+
     def process_form(self, form_data):
         """
-        Processa os dados do formulário, coordenando a geração do arquivo e sua apresentação
+        Processa os dados do formulário e gera o arquivo BPA.
+        
         Args:
-            form_data: dados do formulário enviado pelo usuário
+            form_data (dict): Dados enviados pelo usuário.
+        
         Returns:
             Resposta HTTP apropriada (arquivo para download ou página com erro)
         """
         try:
-            # Obtém o tipo de relatório do formulário
+            year_month = form_data.get("year_month")
+            if not year_month:
+                raise ValueError("O campo 'year_month' é obrigatório.")
+
             tipo_relatorio = form_data.get("tipo_relatorio")
-            # Solicita a geração do arquivo ao serviço
-            memoria = self.service.generate_bpa_file(tipo_relatorio)
-            # Envia o arquivo gerado para download
+            memoria = self.service.generate_bpa_file(year_month, tipo_relatorio)
+
             return self.view.send_file(memoria, tipo_relatorio)
+
         except ValueError as e:
-            # Erro de validação (tipo de relatório inválido)
             return self.view.render_form(error=str(e))
         except Exception as e:
-            # Outros erros inesperados
             return self.view.render_form(error=f"Erro ao gerar arquivo: {str(e)}")

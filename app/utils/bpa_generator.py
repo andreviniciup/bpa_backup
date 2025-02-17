@@ -1,5 +1,6 @@
 import pandas as pd
 from app.utils.bpa_validator import BPAValidator
+from app.utils.bpa_formatter import BPAFormatter
 
 class BPAGenerator:
     # Constantes do arquivo BPA
@@ -7,98 +8,74 @@ class BPAGenerator:
     BPA_C_TYPE = "02"
     BPA_I_TYPE = "03"
     ORIGEM = "EXT"
+    MAX_LINHAS_POR_FOLHA = 90
 
     def __init__(self):
         self.validator = BPAValidator()
+        self.folha_atual = 1
+        self.linhas_na_folha = 0
+
+    def atualizar_folha(self):
+        """Verifica e atualiza a contagem de folhas conforme o limite de linhas."""
+        if self.linhas_na_folha >= self.MAX_LINHAS_POR_FOLHA:
+            self.folha_atual += 1
+            self.linhas_na_folha = 0
 
     def generate_header(self, header_data: dict) -> str:
-        """Gera linha de cabeçalho do arquivo BPA"""
-        if not self.validator.validate_header(header_data):
-            raise ValueError(f"Dados do cabeçalho inválidos: {', '.join(self.validator.get_errors())}")
+        # Verifica se a chave 'year_month' existe, senão tenta usar 'competencia'
+        year_month = header_data.get("year_month") or header_data.get("competencia")
+        
+        if not year_month:
+            raise ValueError("❌ Campo obrigatório ausente: year_month (ou competencia)")
 
         total_lines = str(header_data.get('total_lines', 1)).zfill(6)
         total_sheets = str(header_data.get('total_sheets', 1)).zfill(6)
         control_field = "1111"
         
-        year_month = str(header_data['year_month']).zfill(6)
-        org_name = str(header_data['org_name']).ljust(30)
-        org_acronym = str(header_data.get('org_acronym', '')).ljust(6)
-        cgc_cpf = str(header_data['cgc_cpf']).zfill(14)
-        dest_name = str(header_data['dest_name']).ljust(40)
-        dest_type = header_data['dest_type']
-        version = str(header_data.get('version', '1.0.0')).ljust(10)
-        
-        return (f"{self.HEADER_TYPE}#BPA#{year_month}{total_lines}{total_sheets}{control_field}"
-                f"{org_name}{org_acronym}{cgc_cpf}{dest_name}{dest_type}{version}\r\n")
+        return (f"{self.HEADER_TYPE}#BPA#{year_month.zfill(6)}"
+                f"{total_lines}{total_sheets}{control_field}"
+                f"{header_data['org_name'].ljust(30)}"
+                f"{header_data.get('org_acronym', '').ljust(6)}"
+                f"{header_data['cgc_cpf'].zfill(14)}"
+                f"{header_data['dest_name'].ljust(40)}"
+                f"{header_data['dest_type']}"
+                f"{header_data.get('version', '1.0.0').ljust(10)}\r\n")
 
     def generate_bpa_c(self, row: pd.Series) -> str:
         """Gera linha de BPA Consolidado"""
-        if not self.validator.validate_bpa_c(row):
+        row_dict = BPAFormatter.format_data(row.to_dict())
+
+        if not self.validator.validate_bpa_c(row_dict):
             raise ValueError(f"Dados do BPA Consolidado inválidos: {', '.join(self.validator.get_errors())}")
         
-        line = self.BPA_C_TYPE
-        line += str(row['cnes']).zfill(self.validator.REQUIRED_SIZES['cnes'])
-        line += str(row['competencia']).zfill(self.validator.REQUIRED_SIZES['competencia'])
-        line += str(row['cbo']).ljust(self.validator.REQUIRED_SIZES['cbo'])
-        line += str(row['folha']).zfill(3)
-        line += str(row['sequencial']).zfill(2)
-        line += str(row['procedimento']).zfill(self.validator.REQUIRED_SIZES['procedimento'])
-        line += str(row['idade']).zfill(self.validator.REQUIRED_SIZES['idade'])
-        line += str(row['quantidade']).zfill(6)
-        line += self.ORIGEM
-        line += "\r\n"
+        self.atualizar_folha()
+        self.linhas_na_folha += 1
         
-        return line
+        return (f"{self.BPA_C_TYPE}{row_dict['cnes']}{row_dict['competencia']}"
+                f"{row_dict['cbo']}{str(self.folha_atual).zfill(3)}{row_dict['sequencial']}"
+                f"{row_dict['procedimento']}{row_dict['idade']}{row_dict['quantidade']}"
+                f"{self.ORIGEM}\r\n")
 
     def generate_bpa_i(self, row: pd.Series) -> str:
         """Gera linha de BPA Individualizado"""
-        if not self.validator.validate_bpa_i(row):
+        row_dict = BPAFormatter.format_data(row.to_dict())
+
+        if not self.validator.validate_bpa_i(row_dict):
             raise ValueError(f"Dados do BPA Individualizado inválidos: {', '.join(self.validator.get_errors())}")
-                             
-        line = self.BPA_I_TYPE
-        line += str(row['cnes']).zfill(self.validator.REQUIRED_SIZES['cnes'])
-        line += str(row['competencia']).zfill(self.validator.REQUIRED_SIZES['competencia'])
-        line += str(row['cns_profissional']).zfill(self.validator.REQUIRED_SIZES['cns'])
-        line += str(row['cbo']).ljust(self.validator.REQUIRED_SIZES['cbo'])
-        
-        data_atend = pd.to_datetime(row['data_atendimento']).strftime('%Y%m%d')
-        line += data_atend
-        
-        line += str(row['folha']).zfill(3)
-        line += str(row['sequencial']).zfill(2)
-        line += str(row['procedimento']).zfill(self.validator.REQUIRED_SIZES['procedimento'])
-        line += str(row['cns_paciente']).zfill(self.validator.REQUIRED_SIZES['cns'])
-        line += str(row['sexo']).upper()
-        line += str(row['codigo_municipio']).zfill(6)
-        line += str(row['cid']).ljust(4)
-        line += str(row['idade']).zfill(self.validator.REQUIRED_SIZES['idade'])
-        line += str(row['quantidade']).zfill(6)
-        line += str(row.get('carater_atendimento', '01')).zfill(2)
-        line += str(row.get('numero_autorizacao', '')).ljust(13)
-        line += self.ORIGEM
-        line += str(row['nome_paciente']).ljust(30)
-        
-        dt_nasc = pd.to_datetime(row['data_nascimento']).strftime('%Y%m%d')
-        line += dt_nasc
-        
-        line += str(row.get('raca', '01')).zfill(2)
-        line += str(row.get('etnia', '')).ljust(4)
-        line += str(row.get('nacionalidade', '010')).zfill(3)
-        line += str(row.get('servico', '')).ljust(3)
-        line += str(row.get('classificacao', '')).ljust(3)
-        line += str(row.get('equipe_seq', '')).ljust(8)
-        line += str(row.get('equipe_area', '')).ljust(4)
-        line += str(row.get('cnpj', '')).ljust(14)
-        line += str(row.get('cep', '')).ljust(8)
-        line += str(row.get('codigo_logradouro', '')).ljust(3)
-        line += str(row.get('endereco', '')).ljust(30)
-        line += str(row.get('complemento', '')).ljust(10)
-        line += str(row.get('numero', '')).ljust(5)
-        line += str(row.get('bairro', '')).ljust(30)
-        line += str(row.get('telefone', '')).ljust(11)
-        line += str(row.get('email', '')).ljust(40)
-        line += str(row.get('ine', '')).ljust(10)
-        line += "\r\n"
-        
-        return line
-    
+                              
+        self.atualizar_folha()
+        self.linhas_na_folha += 1
+
+        return (f"{self.BPA_I_TYPE}{row_dict['cnes']}{row_dict['competencia']}"
+                f"{row_dict['cns_profissional']}{row_dict['cbo']}{row_dict['data_atendimento']}"
+                f"{str(self.folha_atual).zfill(3)}{row_dict['sequencial']}"
+                f"{row_dict['procedimento']}{row_dict['cns_paciente']}{row_dict['sexo']}"
+                f"{row_dict['codigo_municipio']}{row_dict['cid']}{row_dict['idade']}"
+                f"{row_dict['quantidade']}{row_dict['carater_atendimento']}"
+                f"{row_dict['numero_autorizacao']}{self.ORIGEM}{row_dict['nome_paciente']}"
+                f"{row_dict['data_nascimento']}{row_dict['raca']}{row_dict['etnia']}"
+                f"{row_dict['nacionalidade']}{row_dict['servico']}{row_dict['classificacao']}"
+                f"{row_dict['equipe_seq']}{row_dict['equipe_area']}{row_dict['cnpj']}"
+                f"{row_dict['cep']}{row_dict['codigo_logradouro']}{row_dict['endereco']}"
+                f"{row_dict['complemento']}{row_dict['numero']}{row_dict['bairro']}"
+                f"{row_dict['telefone']}{row_dict['email']}{row_dict['ine']}\r\n")

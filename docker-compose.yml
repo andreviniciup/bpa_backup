@@ -5,9 +5,9 @@ services:
     container_name: postgres_db
     restart: always
     environment:
-      POSTGRES_DB: testeBPA
-      POSTGRES_USER: desenv
-      POSTGRES_PASSWORD: desenv123
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
     ports:
       - "5432:5432"
     volumes:
@@ -22,7 +22,7 @@ services:
     ports:
       - "5000:5000"
     environment:
-      DATABASE_URL: postgresql://desenv:desenv123@db:5432/testeBPA
+      DATABASE_URL: postgresql://${DB_USER}:${DB_PASSWORD}@db:5432/${DB_NAME}
     volumes:
       - .:/app
     command: flask run --host=0.0.0.0 --port=5000
