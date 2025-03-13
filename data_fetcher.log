@@ -1,0 +1,663 @@
+2025-03-11 19:44:25,296 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-03-11 19:44:25,297 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-11 19:44:33,632 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:44:33] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-11 19:44:33,708 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:44:33] "GET /login HTTP/1.1" 200 -
+2025-03-11 19:44:33,809 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:44:33] "GET /static/styles.css HTTP/1.1" 200 -
+2025-03-11 19:44:33,962 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:44:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-11 19:44:41,636 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:44:41] "POST /login HTTP/1.1" 200 -
+2025-03-11 19:44:41,676 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:44:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 19:44:52,741 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:44:52] "POST /login HTTP/1.1" 200 -
+2025-03-11 19:44:52,781 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:44:52] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 19:45:07,732 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:45:07] "POST /login HTTP/1.1" 200 -
+2025-03-11 19:45:07,780 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:45:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 19:45:13,996 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:45:13] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 19:48:23,070 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:48:23] "POST /login HTTP/1.1" 200 -
+2025-03-11 19:48:23,142 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:48:23] "GET /static/styles.css HTTP/1.1" 200 -
+2025-03-11 19:48:31,146 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:48:31] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-11 19:48:31,158 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:48:31] "GET /login HTTP/1.1" 200 -
+2025-03-11 19:48:31,220 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:48:31] "GET /static/styles.css HTTP/1.1" 200 -
+2025-03-11 19:48:37,893 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:48:37] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-11 19:48:37,901 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:48:37] "GET /login HTTP/1.1" 200 -
+2025-03-11 19:48:37,936 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:48:37] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 19:49:00,240 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:49:00] "GET /login HTTP/1.1" 200 -
+2025-03-11 19:49:00,274 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:49:00] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 19:49:01,532 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:49:01] "GET /login HTTP/1.1" 200 -
+2025-03-11 19:49:01,564 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:49:01] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 19:49:02,526 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:49:02] "GET /login HTTP/1.1" 200 -
+2025-03-11 19:49:02,567 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:49:02] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 19:49:02,698 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:49:02] "GET /login HTTP/1.1" 200 -
+2025-03-11 19:49:02,742 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:49:02] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 19:49:02,915 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:49:02] "GET /login HTTP/1.1" 200 -
+2025-03-11 19:49:02,966 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:49:02] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 19:49:08,457 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:49:08] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-11 19:49:08,464 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:49:08] "GET /login HTTP/1.1" 200 -
+2025-03-11 19:49:08,502 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:49:08] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 19:49:41,309 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:49:41] "GET /login HTTP/1.1" 200 -
+2025-03-11 19:49:41,353 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:49:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 19:49:47,214 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:49:47] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-11 19:49:47,222 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:49:47] "GET /login HTTP/1.1" 200 -
+2025-03-11 19:49:47,261 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:49:47] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 19:55:24,836 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:55:24] "GET /login HTTP/1.1" 200 -
+2025-03-11 19:55:24,887 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:55:24] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 19:55:36,191 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:55:36] "POST /login HTTP/1.1" 200 -
+2025-03-11 19:55:36,236 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:55:36] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 19:57:37,057 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:57:37] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-11 19:57:37,069 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:57:37] "GET /login HTTP/1.1" 200 -
+2025-03-11 19:57:37,127 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:57:37] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 19:57:41,267 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:57:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 19:57:57,681 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:57:57] "POST /login HTTP/1.1" 200 -
+2025-03-11 19:57:57,737 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:57:57] "GET /static/styles.css HTTP/1.1" 200 -
+2025-03-11 19:58:57,570 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:58:57] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-11 19:58:57,578 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:58:57] "GET /login HTTP/1.1" 200 -
+2025-03-11 19:58:57,645 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:58:57] "GET /static/styles.css HTTP/1.1" 200 -
+2025-03-11 19:59:33,150 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-03-11 19:59:33,151 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-11 19:59:46,744 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:59:46] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-11 19:59:46,831 - app - ERROR - Exception on /menu [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/routes.py", line 26, in menu
+    return render_template('menu.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.11/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/app/templates/menu.html", line 21, in top-level template code
+    <a href="{{ url_for('dashboard') }}" class="button">Acessar</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'dashboard'. Did you mean 'static' instead?
+2025-03-11 19:59:46,848 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 19:59:46] "[35m[1mGET /menu HTTP/1.1[0m" 500 -
+2025-03-11 20:00:12,746 - app - ERROR - Exception on /menu [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/routes.py", line 26, in menu
+  File "/usr/local/lib/python3.11/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.11/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/app/templates/menu.html", line 21, in top-level template code
+    <a href="{{ url_for('dashboard') }}" class="button">Acessar</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'dashboard'. Did you mean 'static' instead?
+2025-03-11 20:00:12,754 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 20:00:12] "[35m[1mGET /menu HTTP/1.1[0m" 500 -
+2025-03-11 20:00:36,205 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-03-11 20:00:36,206 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-11 20:00:37,274 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 20:00:37] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-11 20:00:37,318 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 20:00:37] "GET /login HTTP/1.1" 200 -
+2025-03-11 20:00:37,430 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 20:00:37] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 20:00:47,384 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 20:00:47] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-03-11 20:00:47,405 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 20:00:47] "GET /menu HTTP/1.1" 200 -
+2025-03-11 20:00:47,457 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 20:00:47] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 20:00:51,121 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 20:00:51] "GET /formulario_bpa HTTP/1.1" 200 -
+2025-03-11 20:00:51,186 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 20:00:51] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 20:00:53,971 - bpa_controller - INFO - Iniciando processamento de formulário BPA. Competência: None
+2025-03-11 20:00:53,972 - bpa_controller - WARNING - Tentativa de submissão sem competência
+2025-03-11 20:00:53,972 - bpa_controller - ERROR - Erro inesperado: BPAView.render_form() got an unexpected keyword argument 'form_data'
+Traceback (most recent call last):
+  File "/app/app/utils/bpa_controller.py", line 34, in process_form
+    return self.view.render_form(
+           ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BPAView.render_form() got an unexpected keyword argument 'form_data'
+2025-03-11 20:00:53,975 - app - ERROR - Exception on /formulario_bpa [POST]
+Traceback (most recent call last):
+  File "/app/app/utils/bpa_controller.py", line 34, in process_form
+    return self.view.render_form(
+           ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BPAView.render_form() got an unexpected keyword argument 'form_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/routes.py", line 64, in formulario_bpa
+    return bpa_controller.process_form(request.form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/utils/bpa_controller.py", line 78, in process_form
+    return self.view.render_form(
+           ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BPAView.render_form() got an unexpected keyword argument 'form_data'
+2025-03-11 20:00:53,981 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 20:00:53] "[35m[1mPOST /formulario_bpa HTTP/1.1[0m" 500 -
+2025-03-11 20:01:52,384 - bpa_controller - INFO - Iniciando processamento de formulário BPA. Competência: None
+2025-03-11 20:01:52,384 - bpa_controller - WARNING - Tentativa de submissão sem competência
+2025-03-11 20:01:52,384 - bpa_controller - ERROR - Erro inesperado: BPAView.render_form() got an unexpected keyword argument 'form_data'
+Traceback (most recent call last):
+  File "/app/app/utils/bpa_controller.py", line 34, in process_form
+    return self.view.render_form(
+           ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BPAView.render_form() got an unexpected keyword argument 'form_data'
+2025-03-11 20:01:52,388 - app - ERROR - Exception on /formulario_bpa [POST]
+Traceback (most recent call last):
+  File "/app/app/utils/bpa_controller.py", line 34, in process_form
+    return self.view.render_form(
+           ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BPAView.render_form() got an unexpected keyword argument 'form_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/routes.py", line 64, in formulario_bpa
+    return bpa_controller.process_form(request.form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/utils/bpa_controller.py", line 78, in process_form
+    return self.view.render_form(
+           ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BPAView.render_form() got an unexpected keyword argument 'form_data'
+2025-03-11 20:01:52,395 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 20:01:52] "[35m[1mPOST /formulario_bpa HTTP/1.1[0m" 500 -
+2025-03-11 20:02:01,583 - bpa_controller - INFO - Iniciando processamento de formulário BPA. Competência: None
+2025-03-11 20:02:01,584 - bpa_controller - WARNING - Tentativa de submissão sem competência
+2025-03-11 20:02:01,584 - bpa_controller - ERROR - Erro inesperado: BPAView.render_form() got an unexpected keyword argument 'form_data'
+Traceback (most recent call last):
+  File "/app/app/utils/bpa_controller.py", line 34, in process_form
+    return self.view.render_form(
+           ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BPAView.render_form() got an unexpected keyword argument 'form_data'
+2025-03-11 20:02:01,586 - app - ERROR - Exception on /formulario_bpa [POST]
+Traceback (most recent call last):
+  File "/app/app/utils/bpa_controller.py", line 34, in process_form
+    return self.view.render_form(
+           ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BPAView.render_form() got an unexpected keyword argument 'form_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/routes.py", line 64, in formulario_bpa
+    return bpa_controller.process_form(request.form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/utils/bpa_controller.py", line 78, in process_form
+    return self.view.render_form(
+           ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BPAView.render_form() got an unexpected keyword argument 'form_data'
+2025-03-11 20:02:01,591 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 20:02:01] "[35m[1mPOST /formulario_bpa HTTP/1.1[0m" 500 -
+2025-03-11 20:08:33,356 - bpa_controller - INFO - Iniciando processamento de formulário BPA. Competência: None
+2025-03-11 20:08:33,356 - bpa_controller - WARNING - Tentativa de submissão sem competência
+2025-03-11 20:08:33,357 - bpa_controller - ERROR - Erro inesperado: BPAView.render_form() got an unexpected keyword argument 'form_data'
+Traceback (most recent call last):
+  File "/app/app/utils/bpa_controller.py", line 34, in process_form
+    return self.view.render_form(
+           ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BPAView.render_form() got an unexpected keyword argument 'form_data'
+2025-03-11 20:08:33,360 - app - ERROR - Exception on /formulario_bpa [POST]
+Traceback (most recent call last):
+  File "/app/app/utils/bpa_controller.py", line 34, in process_form
+    return self.view.render_form(
+           ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BPAView.render_form() got an unexpected keyword argument 'form_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/routes.py", line 64, in formulario_bpa
+    return bpa_controller.process_form(request.form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/utils/bpa_controller.py", line 78, in process_form
+    return self.view.render_form(
+           ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BPAView.render_form() got an unexpected keyword argument 'form_data'
+2025-03-11 20:08:33,368 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 20:08:33] "[35m[1mPOST /formulario_bpa HTTP/1.1[0m" 500 -
+2025-03-11 20:14:39,496 - bpa_controller - INFO - Iniciando processamento de formulário BPA. Competência: None
+2025-03-11 20:14:39,497 - bpa_controller - WARNING - Tentativa de submissão sem competência
+2025-03-11 20:14:39,498 - bpa_controller - ERROR - Erro inesperado: BPAView.render_form() got an unexpected keyword argument 'form_data'
+Traceback (most recent call last):
+  File "/app/app/utils/bpa_controller.py", line 34, in process_form
+    return self.view.render_form(
+           ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BPAView.render_form() got an unexpected keyword argument 'form_data'
+2025-03-11 20:14:39,502 - app - ERROR - Exception on /formulario_bpa [POST]
+Traceback (most recent call last):
+  File "/app/app/utils/bpa_controller.py", line 34, in process_form
+    return self.view.render_form(
+           ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BPAView.render_form() got an unexpected keyword argument 'form_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/routes.py", line 64, in formulario_bpa
+    return bpa_controller.process_form(request.form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/utils/bpa_controller.py", line 78, in process_form
+    return self.view.render_form(
+           ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BPAView.render_form() got an unexpected keyword argument 'form_data'
+2025-03-11 20:14:39,511 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 20:14:39] "[35m[1mPOST /formulario_bpa HTTP/1.1[0m" 500 -
+2025-03-11 20:15:02,021 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-03-11 20:15:02,022 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-11 20:15:16,680 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 20:15:16] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-11 20:15:16,714 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 20:15:16] "GET /login HTTP/1.1" 200 -
+2025-03-11 20:15:16,792 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 20:15:16] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 20:15:23,552 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 20:15:23] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-03-11 20:15:23,569 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 20:15:23] "GET /menu HTTP/1.1" 200 -
+2025-03-11 20:15:23,625 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 20:15:23] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 20:15:28,450 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 20:15:28] "GET /formulario_bpa HTTP/1.1" 200 -
+2025-03-11 20:15:28,498 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 20:15:28] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 20:15:33,597 - bpa_controller - INFO - Iniciando processamento de formulário BPA. Competência: None
+2025-03-11 20:15:33,598 - bpa_controller - WARNING - Tentativa de submissão sem competência
+2025-03-11 20:15:33,598 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 20:15:33] "POST /formulario_bpa HTTP/1.1" 200 -
+2025-03-11 20:15:33,634 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 20:15:33] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 20:50:46,745 - bpa_controller - INFO - Iniciando processamento de formulário BPA. Competência: None
+2025-03-11 20:50:46,747 - bpa_controller - WARNING - Tentativa de submissão sem competência
+2025-03-11 20:50:46,751 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 20:50:46] "POST /formulario_bpa HTTP/1.1" 200 -
+2025-03-11 20:50:46,821 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 20:50:46] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 20:52:05,970 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 20:52:05] "[33mGET /test_bpa HTTP/1.1[0m" 404 -
+2025-03-11 20:52:45,076 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-03-11 20:52:45,077 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-11 20:53:37,596 - bpa_service - INFO - Buscando dados para competência 202503
+2025-03-11 20:53:38,011 - DataFetcher - ERROR - Erro ao buscar dados para competência '202503': relation "public.procedimentos" does not exist
+LINE 2:                     SELECT * FROM "public".procedimentos 
+                                          ^
+
+2025-03-11 20:53:38,215 - bpa_service - WARNING - Nenhum dado encontrado para competência 202503. Usando dados de exemplo.
+2025-03-11 20:53:38,629 - DataFetcher - ERROR - Erro ao buscar dados da tabela 'estabelecimento': relation "public.estabelecimento" does not exist
+LINE 1: SELECT "num_cnes", "num_cnpj" FROM "public"."estabelecimento...
+                                           ^
+
+2025-03-11 20:53:39,139 - DataFetcher - ERROR - Erro ao buscar dados da tabela 'competencia': relation "public.competencia" does not exist
+LINE 1: SELECT "cod_competencia" FROM "public"."competencia" LIMIT 1...
+                                      ^
+
+2025-03-11 20:53:39,756 - DataFetcher - ERROR - Erro ao buscar dados da tabela 'medico': column "num_cns" does not exist
+LINE 1: SELECT "num_cbo", "num_cns" FROM "public"."medico" LIMIT 1;
+                          ^
+HINT:  Perhaps you meant to reference the column "medico.num_cnes".
+
+2025-03-11 20:53:40,199 - DataFetcher - ERROR - Erro ao buscar dados da tabela 'atendimento': column "num_autorizacao" does not exist
+LINE 1: SELECT "num_autorizacao", "cod_servico", "num_folha", "cod_t...
+               ^
+
+2025-03-11 20:53:41,604 - DataFetcher - WARNING - Verificação falhou para o campo 'prd-pa' com valor '040703003-4'
+2025-03-11 20:53:42,289 - DataFetcher - ERROR - Erro ao buscar dados da tabela 'paciente': column "cod_nacionalidade" does not exist
+LINE 1: SELECT "cod_municipio", "cod_nacionalidade", "tip_sexo", "co...
+                                ^
+
+2025-03-11 20:53:42,906 - DataFetcher - ERROR - Erro ao buscar dados da tabela 'equipe': relation "public.equipe" does not exist
+LINE 1: ...ELECT "num_ine", "num_sequencia", "num_area" FROM "public"."...
+                                                             ^
+
+2025-03-11 20:53:43,518 - DataFetcher - ERROR - Erro ao buscar dados da tabela 'endereco_paciente': relation "public.endereco_paciente" does not exist
+LINE 1: ...s_complemento", "des_bairro", "num_endereco" FROM "public"."...
+                                                             ^
+
+2025-03-11 20:53:44,133 - DataFetcher - ERROR - Erro ao buscar dados da tabela 'contato_paciente': relation "public.contato_paciente" does not exist
+LINE 1: SELECT "des_email", "num_telefone" FROM "public"."contato_pa...
+                                                ^
+
+2025-03-11 20:53:44,373 - bpa_service - INFO - Iniciando geração de arquivo BPA com 10 registros
+2025-03-11 20:53:44,377 - bpa_service - INFO - Processando lote de registros 1 a 10
+2025-03-11 20:53:44,379 - app - ERROR - Exception on /test_bpa [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/routes.py", line 72, in test_bpa
+    memoria = service.generate_bpa_file("202503", "individualizada")  # Teste com um mês fixo
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/bpa_service.py", line 124, in generate_bpa_file
+    memoria.write(self.generator.generate_bpa_i(row).encode("utf-8"))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/utils/bpa_generator.py", line 61, in generate_bpa_i
+    row_dict = BPAFormatter.format_data(row.to_dict())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BPAFormatter.format_data() missing 1 required positional argument: 'row'
+2025-03-11 20:53:44,426 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 20:53:44] "[35m[1mGET /test_bpa HTTP/1.1[0m" 500 -
+2025-03-11 21:05:28,998 - bpa_service - INFO - Buscando dados para competência 202503
+2025-03-11 21:05:29,266 - DataFetcher - ERROR - Erro ao buscar dados para competência '202503': relation "public.procedimentos" does not exist
+LINE 2:                     SELECT * FROM "public".procedimentos 
+                                          ^
+
+2025-03-11 21:05:29,472 - bpa_service - WARNING - Nenhum dado encontrado para competência 202503. Usando dados de exemplo.
+2025-03-11 21:05:29,892 - DataFetcher - ERROR - Erro ao buscar dados da tabela 'estabelecimento': relation "public.estabelecimento" does not exist
+LINE 1: SELECT "num_cnes", "num_cnpj" FROM "public"."estabelecimento...
+                                           ^
+
+2025-03-11 21:05:30,495 - DataFetcher - ERROR - Erro ao buscar dados da tabela 'competencia': relation "public.competencia" does not exist
+LINE 1: SELECT "cod_competencia" FROM "public"."competencia" LIMIT 1...
+                                      ^
+
+2025-03-11 21:05:31,113 - DataFetcher - ERROR - Erro ao buscar dados da tabela 'medico': column "num_cns" does not exist
+LINE 1: SELECT "num_cbo", "num_cns" FROM "public"."medico" LIMIT 1;
+                          ^
+HINT:  Perhaps you meant to reference the column "medico.num_cnes".
+
+2025-03-11 21:05:31,727 - DataFetcher - ERROR - Erro ao buscar dados da tabela 'atendimento': column "num_autorizacao" does not exist
+LINE 1: SELECT "num_autorizacao", "cod_servico", "num_folha", "cod_t...
+               ^
+
+2025-03-11 21:05:33,156 - DataFetcher - WARNING - Verificação falhou para o campo 'prd-pa' com valor '040703003-4'
+2025-03-11 21:05:33,565 - DataFetcher - ERROR - Erro ao buscar dados da tabela 'paciente': column "cod_nacionalidade" does not exist
+LINE 1: SELECT "cod_municipio", "cod_nacionalidade", "tip_sexo", "co...
+                                ^
+
+2025-03-11 21:05:34,188 - DataFetcher - ERROR - Erro ao buscar dados da tabela 'equipe': relation "public.equipe" does not exist
+LINE 1: ...ELECT "num_ine", "num_sequencia", "num_area" FROM "public"."...
+                                                             ^
+
+2025-03-11 21:05:34,793 - DataFetcher - ERROR - Erro ao buscar dados da tabela 'endereco_paciente': relation "public.endereco_paciente" does not exist
+LINE 1: ...s_complemento", "des_bairro", "num_endereco" FROM "public"."...
+                                                             ^
+
+2025-03-11 21:05:35,548 - DataFetcher - ERROR - Erro ao buscar dados da tabela 'contato_paciente': relation "public.contato_paciente" does not exist
+LINE 1: SELECT "des_email", "num_telefone" FROM "public"."contato_pa...
+                                                ^
+
+2025-03-11 21:05:35,726 - bpa_service - INFO - Iniciando geração de arquivo BPA com 10 registros
+2025-03-11 21:05:35,727 - bpa_service - INFO - Processando lote de registros 1 a 10
+2025-03-11 21:05:35,728 - app - ERROR - Exception on /test_bpa [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/routes.py", line 72, in test_bpa
+  File "/app/app/services/bpa_service.py", line 124, in generate_bpa_file
+    memoria.write(self.generator.generate_bpa_i(row).encode("utf-8"))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/utils/bpa_generator.py", line 61, in generate_bpa_i
+    row_dict = BPAFormatter.format_data(row.to_dict())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BPAFormatter.format_data() missing 1 required positional argument: 'row'
+2025-03-11 21:05:35,776 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 21:05:35] "[35m[1mGET /test_bpa HTTP/1.1[0m" 500 -
+2025-03-11 21:05:41,446 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 21:05:41] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-11 21:05:41,495 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 21:05:41] "GET /login HTTP/1.1" 200 -
+2025-03-11 21:05:41,591 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 21:05:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 21:05:55,628 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 21:05:55] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-03-11 21:05:55,677 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 21:05:55] "GET /menu HTTP/1.1" 200 -
+2025-03-11 21:05:55,757 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 21:05:55] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 21:05:58,759 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 21:05:58] "GET /formulario_bpa HTTP/1.1" 200 -
+2025-03-11 21:05:58,848 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 21:05:58] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 21:06:00,563 - bpa_controller - INFO - Iniciando processamento de formulário BPA. Competência: None
+2025-03-11 21:06:00,563 - bpa_controller - WARNING - Tentativa de submissão sem competência
+2025-03-11 21:06:00,564 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 21:06:00] "POST /formulario_bpa HTTP/1.1" 200 -
+2025-03-11 21:06:00,687 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 21:06:00] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 21:08:41,689 - bpa_controller - INFO - Iniciando processamento de formulário BPA. Competência: None
+2025-03-11 21:08:41,690 - bpa_controller - WARNING - Tentativa de submissão sem competência
+2025-03-11 21:08:41,691 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 21:08:41] "POST /formulario_bpa HTTP/1.1" 200 -
+2025-03-11 21:08:41,774 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 21:08:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 21:13:36,909 - bpa_controller - INFO - Iniciando processamento de formulário BPA. Competência: None
+2025-03-11 21:13:36,910 - bpa_controller - WARNING - Tentativa de submissão sem competência
+2025-03-11 21:13:36,912 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 21:13:36] "POST /formulario_bpa HTTP/1.1" 200 -
+2025-03-11 21:13:36,976 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 21:13:36] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 21:13:54,539 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 21:13:54] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-11 21:13:54,565 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 21:13:54] "GET /login HTTP/1.1" 200 -
+2025-03-11 21:13:54,659 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 21:13:54] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 21:14:01,661 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 21:14:01] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-03-11 21:14:01,682 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 21:14:01] "GET /menu HTTP/1.1" 200 -
+2025-03-11 21:14:01,772 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 21:14:01] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 21:14:04,100 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 21:14:04] "GET /formulario_bpa HTTP/1.1" 200 -
+2025-03-11 21:14:04,196 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 21:14:04] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 21:14:07,748 - bpa_controller - INFO - Iniciando processamento de formulário BPA. Competência: None
+2025-03-11 21:14:07,748 - bpa_controller - WARNING - Tentativa de submissão sem competência
+2025-03-11 21:14:07,749 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 21:14:07] "POST /formulario_bpa HTTP/1.1" 200 -
+2025-03-11 21:14:07,808 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 21:14:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 21:16:12,886 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-03-11 21:16:12,887 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-11 21:16:27,030 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 21:16:27] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-11 21:16:27,085 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 21:16:27] "GET /login HTTP/1.1" 200 -
+2025-03-11 21:16:27,176 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 21:16:27] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 21:16:36,567 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 21:16:36] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-03-11 21:16:36,615 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 21:16:36] "GET /menu HTTP/1.1" 200 -
+2025-03-11 21:16:36,703 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 21:16:36] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 21:16:38,235 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 21:16:38] "GET /formulario_bpa HTTP/1.1" 200 -
+2025-03-11 21:16:38,312 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 21:16:38] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-11 21:16:52,293 - bpa_controller - INFO - Iniciando processamento de formulário BPA. Competência: 202503
+2025-03-11 21:16:52,294 - bpa_controller - INFO - Gerando arquivo BPA consolidado para competência 202503
+2025-03-11 21:16:52,295 - bpa_service - INFO - Buscando dados para competência 202503
+2025-03-11 21:16:52,999 - DataFetcher - ERROR - Erro ao buscar dados para competência '202503': relation "public.procedimentos" does not exist
+LINE 2:                     SELECT * FROM "public".procedimentos 
+                                          ^
+
+2025-03-11 21:16:53,204 - bpa_service - WARNING - Nenhum dado encontrado para competência 202503. Usando dados de exemplo.
+2025-03-11 21:16:53,645 - DataFetcher - ERROR - Erro ao buscar dados da tabela 'estabelecimento': relation "public.estabelecimento" does not exist
+LINE 1: SELECT "num_cnes", "num_cnpj" FROM "public"."estabelecimento...
+                                           ^
+
+2025-03-11 21:16:53,655 - bpa_controller - INFO - Iniciando processamento de formulário BPA. Competência: 202503
+2025-03-11 21:16:53,656 - bpa_controller - INFO - Gerando arquivo BPA consolidado para competência 202503
+2025-03-11 21:16:53,656 - bpa_service - INFO - Buscando dados para competência 202503
+2025-03-11 21:16:54,258 - DataFetcher - ERROR - Erro ao buscar dados da tabela 'competencia': relation "public.competencia" does not exist
+LINE 1: SELECT "cod_competencia" FROM "public"."competencia" LIMIT 1...
+                                      ^
+
+2025-03-11 21:16:54,883 - DataFetcher - ERROR - Erro ao buscar dados da tabela 'medico': column "num_cns" does not exist
+LINE 1: SELECT "num_cns", "num_cbo" FROM "public"."medico" LIMIT 1;
+               ^
+HINT:  Perhaps you meant to reference the column "medico.num_cnes".
+
+2025-03-11 21:16:55,259 - DataFetcher - ERROR - Erro ao buscar dados da tabela 'atendimento': column "cod_servico" does not exist
+LINE 1: SELECT "cod_servico", "num_sequencia", "num_folha", "cod_cid...
+               ^
+HINT:  Perhaps you meant to reference the column "atendimento.cod_medico".
+
+2025-03-11 21:16:55,412 - DataFetcher - ERROR - Erro ao buscar dados para competência '202503': relation "public.procedimentos" does not exist
+LINE 2:                     SELECT * FROM "public".procedimentos 
+                                          ^
+
+2025-03-11 21:16:55,570 - bpa_service - WARNING - Nenhum dado encontrado para competência 202503. Usando dados de exemplo.
+2025-03-11 21:16:55,835 - DataFetcher - ERROR - Erro ao buscar dados da tabela 'estabelecimento': relation "public.estabelecimento" does not exist
+LINE 1: SELECT "num_cnes", "num_cnpj" FROM "public"."estabelecimento...
+                                           ^
+
+2025-03-11 21:16:56,157 - DataFetcher - WARNING - Verificação falhou para o campo 'prd-pa' com valor '040703003-4'
+2025-03-11 21:16:56,210 - DataFetcher - ERROR - Erro ao buscar dados da tabela 'competencia': relation "public.competencia" does not exist
+LINE 1: SELECT "cod_competencia" FROM "public"."competencia" LIMIT 1...
+                                      ^
+
+2025-03-11 21:16:56,398 - DataFetcher - ERROR - Erro ao buscar dados da tabela 'paciente': column "cod_raca" does not exist
+LINE 1: SELECT "cod_raca", "idade", "tip_sexo", "num_cns", "cod_muni...
+               ^
+
+2025-03-11 21:16:56,574 - DataFetcher - ERROR - Erro ao buscar dados da tabela 'medico': column "num_cns" does not exist
+LINE 1: SELECT "num_cns", "num_cbo" FROM "public"."medico" LIMIT 1;
+               ^
+HINT:  Perhaps you meant to reference the column "medico.num_cnes".
+
+2025-03-11 21:16:56,757 - DataFetcher - ERROR - Erro ao buscar dados da tabela 'equipe': relation "public.equipe" does not exist
+LINE 1: ...ELECT "num_sequencia", "num_area", "num_ine" FROM "public"."...
+                                                             ^
+
+2025-03-11 21:16:56,956 - DataFetcher - ERROR - Erro ao buscar dados da tabela 'atendimento': column "cod_servico" does not exist
+LINE 1: SELECT "cod_servico", "num_sequencia", "num_folha", "cod_cid...
+               ^
+HINT:  Perhaps you meant to reference the column "atendimento.cod_medico".
+
+2025-03-11 21:16:57,132 - DataFetcher - ERROR - Erro ao buscar dados da tabela 'endereco_paciente': relation "public.endereco_paciente" does not exist
+LINE 1: ...es_complemento", "num_cep", "des_logradouro" FROM "public"."...
+                                                             ^
+
+2025-03-11 21:16:57,610 - DataFetcher - ERROR - Erro ao buscar dados da tabela 'contato_paciente': relation "public.contato_paciente" does not exist
+LINE 1: SELECT "des_email", "num_telefone" FROM "public"."contato_pa...
+                                                ^
+
+2025-03-11 21:16:57,841 - bpa_service - INFO - Iniciando geração de arquivo BPA com 10 registros
+2025-03-11 21:16:57,842 - bpa_service - INFO - Processando lote de registros 1 a 10
+2025-03-11 21:16:57,843 - bpa_controller - ERROR - Erro inesperado: BPAFormatter.format_data() missing 1 required positional argument: 'row'
+Traceback (most recent call last):
+  File "/app/app/utils/bpa_controller.py", line 56, in process_form
+    memoria = self.service.generate_bpa_file(year_month, tipo_relatorio)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/bpa_service.py", line 126, in generate_bpa_file
+    memoria.write(self.generator.generate_bpa_c(row).encode("utf-8"))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/utils/bpa_generator.py", line 46, in generate_bpa_c
+    row_dict = BPAFormatter.format_data(row.to_dict())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BPAFormatter.format_data() missing 1 required positional argument: 'row'
+2025-03-11 21:16:57,899 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 21:16:57] "POST /formulario_bpa HTTP/1.1" 200 -
+2025-03-11 21:16:57,941 - DataFetcher - WARNING - Verificação falhou para o campo 'prd-pa' com valor '040703003-4'
+2025-03-11 21:16:58,326 - DataFetcher - ERROR - Erro ao buscar dados da tabela 'paciente': column "cod_raca" does not exist
+LINE 1: SELECT "cod_raca", "idade", "tip_sexo", "num_cns", "cod_muni...
+               ^
+
+2025-03-11 21:16:59,038 - DataFetcher - ERROR - Erro ao buscar dados da tabela 'equipe': relation "public.equipe" does not exist
+LINE 1: ...ELECT "num_sequencia", "num_area", "num_ine" FROM "public"."...
+                                                             ^
+
+2025-03-11 21:16:59,756 - DataFetcher - ERROR - Erro ao buscar dados da tabela 'endereco_paciente': relation "public.endereco_paciente" does not exist
+LINE 1: ...es_complemento", "num_cep", "des_logradouro" FROM "public"."...
+                                                             ^
+
+2025-03-11 21:17:00,371 - DataFetcher - ERROR - Erro ao buscar dados da tabela 'contato_paciente': relation "public.contato_paciente" does not exist
+LINE 1: SELECT "des_email", "num_telefone" FROM "public"."contato_pa...
+                                                ^
+
+2025-03-11 21:17:00,582 - bpa_service - INFO - Iniciando geração de arquivo BPA com 10 registros
+2025-03-11 21:17:00,583 - bpa_service - INFO - Processando lote de registros 1 a 10
+2025-03-11 21:17:00,585 - bpa_controller - ERROR - Erro inesperado: BPAFormatter.format_data() missing 1 required positional argument: 'row'
+Traceback (most recent call last):
+  File "/app/app/utils/bpa_controller.py", line 56, in process_form
+    memoria = self.service.generate_bpa_file(year_month, tipo_relatorio)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/bpa_service.py", line 126, in generate_bpa_file
+    memoria.write(self.generator.generate_bpa_c(row).encode("utf-8"))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/utils/bpa_generator.py", line 46, in generate_bpa_c
+    row_dict = BPAFormatter.format_data(row.to_dict())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BPAFormatter.format_data() missing 1 required positional argument: 'row'
+2025-03-11 21:17:00,608 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 21:17:00] "POST /formulario_bpa HTTP/1.1" 200 -
+2025-03-11 21:17:00,682 - werkzeug - INFO - 172.18.0.1 - - [11/Mar/2025 21:17:00] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -

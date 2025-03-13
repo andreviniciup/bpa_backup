@@ -3,7 +3,7 @@ from flask import render_template, send_file
 # Classe responsável pela apresentação (interface com usuário)
 class BPAView:
     @staticmethod
-    def render_form(error=None):
+    def render_form(error=None, form_data=None):
         """
         Renderiza o formulário HTML
         Args:
@@ -11,18 +11,11 @@ class BPAView:
         Returns:
             Página HTML renderizada
         """
-        return render_template("bpa.html", error=error)
+        return render_template("bpa.html", error=error, form_data=form_data)
     
     @staticmethod
     def send_file(memoria, tipo_relatorio):
-        """
-        Prepara o arquivo para download
-        Args:
-            memoria: buffer contendo o arquivo
-            tipo_relatorio: tipo do relatório para nome do arquivo
-        Returns:
-            Resposta HTTP para download do arquivo
-        """
+        print(f"Tamanho do arquivo gerado: {memoria.getbuffer().nbytes} bytes")  # Debug
         return send_file(
             memoria,
             as_attachment=True,

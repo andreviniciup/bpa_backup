@@ -1,4 +1,4 @@
-from sqlalchemy import text
+'''from sqlalchemy import text
 from app import db
 
 def get_dashboard_data():
@@ -19,4 +19,4 @@ def get_dashboard_data():
         ORDER BY QA.seq_quantitativo_atendimento DESC LIMIT 1;
     """)
     result = db.session.execute(sql)
-    return result.fetchone()
+    return result.fetchone()'''

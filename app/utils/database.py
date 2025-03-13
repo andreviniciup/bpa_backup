@@ -20,13 +20,12 @@ class Database:
                 user=os.getenv("DB_USER"),
                 password=os.getenv("DB_PASSWORD"),
                 host=os.getenv("DB_HOST"),
-                port=os.getenv("DB_PORT"),
-                client_encoding="LATIN1"
+                port=os.getenv("DB_PORT")
             )
             if self.db_pool:
-                print("✅ Pool de conexões criado com sucesso!")
+                print("Pool de conexões criado com sucesso!")
         except Exception as e:
-            print(f"❌ Erro ao criar pool de conexões: {e}")
+            print(f" Erro ao criar pool de conexões: {e}")
 
     def get_connection(self):
         """ obtém uma conexão do pool. """
@@ -34,7 +33,7 @@ class Database:
             if self.db_pool:
                 return self.db_pool.getconn()
         except Exception as e:
-            print(f"❌ Erro ao obter conexão: {e}")
+            print(f" Erro ao obter conexão: {e}")
         return None
 
     def release_connection(self, conn):
@@ -46,7 +45,7 @@ class Database:
         """ fecha todas as conexões no pool. """
         if self.db_pool:
             self.db_pool.closeall()
-            print("🛑 Pool de conexões fechado.")
+            print(" Pool de conexões fechado.")
 
 # testando a conexão
 if __name__ == "__main__":
@@ -54,8 +53,8 @@ if __name__ == "__main__":
     conn = db.get_connection()
     
     if conn:
-        print("✅ Conexão com PostgreSQL bem-sucedida!")
+        print("Conexão com PostgreSQL bem-sucedida!")
         db.release_connection(conn)  # devolve a conexão ao pool
     else:
-        print("❌ Falha ao conectar ao banco.")
+        print(" Falha ao conectar ao banco.")
 

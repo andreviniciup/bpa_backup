@@ -17,29 +17,26 @@
     <form method="post">
         <label for="tipo_relatorio">Tipo de Relatório:</label>
         <select id="tipo_relatorio" name="tipo_relatorio" required>
-            <option value="CONSOLIDADO">Consolidado</option>
-            <option value="INDIVIDUALIZADA">Individualizada</option>
+            <option value="consolidado">Consolidado</option>
+            <option value="individualizada">Individualizada</option>
         </select>
         
         <br><br>
-        <label for="mes">Mês:</label>
-        <select id="mes" name="mes" required>
-            <option value="1">Janeiro</option>
-            <option value="2">Fevereiro</option>
-            <option value="3">Março</option>
-            <option value="4">Abril</option>
-            <option value="5">Maio</option>
-            <option value="6">Junho</option>
-            <option value="7">Julho</option>
-            <option value="8">Agosto</option>
-            <option value="9">Setembro</option>
-            <option value="10">Outubro</option>
-            <option value="11">Novembro</option>
-            <option value="12">Dezembro</option>
-        </select>
+        <label for="year_month">Competência (AAAAMM):</label>
+        <input type="text" id="year_month" name="year_month" required pattern="\d{6}" 
+               placeholder="202503" value="{{ form_data.year_month if form_data else '' }}">
+        <small>Digite no formato AAAAMM (exemplo: 202503 para março de 2025)</small>
+        
         <br><br>
         <button type="submit">Gerar Relatório</button>
     </form>
+    
+    {% if error %}
+    <div class="error-message">
+        {{ error }}
+    </div>
+    {% endif %}
+    
     <br>
     <form action="{{ url_for('logout') }}" method="post">
         <button type="submit">Logout</button>

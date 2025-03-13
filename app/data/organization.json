@@ -1,0 +1,22 @@
+{
+    "organization": {
+      "name": "HOSPITAL MUNICIPAL DE EXEMPLO",
+      "acronym": "HME",
+      "cgc_cpf": "12345678901234",
+      "cnes": "1234567"
+    },
+    "destination": {
+      "name": "SECRETARIA MUNICIPAL DE SAÚDE",
+      "type": "M"
+    },
+    "system": {
+      "version": "1.0.0",
+      "environment": "production",
+      "bpa_version": "01.01.00"
+    },
+    "database": {
+      "schema": "public",
+      "batch_size": 1000,
+      "max_records": 50000
+    }
+  }
